@@ -377,7 +377,14 @@ sudo install -m 555 argocd-linux-amd64 /usr/local/bin/argocd
 
 rm argocd-linux-amd64
 ```
+Para instalar o `argocd` CLI no Linux ARM64, basta executar o seguinte comando
 
+```bash
+curl -sSL -o argocd-linux-arm64 https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-arm64
+sudo install -m 555 argocd-linux-arm64 /usr/local/bin/argocd
+rm argocd-linux-arm64
+
+```
 &nbsp;
 
 Com o comando acima fizemos o download do binário do `argocd` CLI, e o instalamos no diretório `/usr/local/bin/argocd`, para fazer a instalação utilizamos o comando `install` do Linux, que é um comando que faz a instalação de arquivos e diretórios. Passamos os parâmetros `-m 555` para definir as permissões do arquivo, e o nome do arquivo que queremos instalar.
